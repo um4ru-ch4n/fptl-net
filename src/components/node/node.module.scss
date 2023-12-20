@@ -1,0 +1,48 @@
+.Node {
+    background-color: #FFF;
+    min-width: 50px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.40px;
+    border: #000 solid 1px;
+}
+
+.node-rectangle {
+    min-height: 40px;
+    min-width: 60px;
+}
+
+.node-circle {
+    border-radius: 100%;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.node-root {
+    border-radius: 100%;
+    background-color: #ff0000;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.node-end {
+    border-radius: 100%;
+    background-color: #000;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.node_label {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.node_input {
+    font-size: 1rem;
+    max-width: 35px;
+    outline: none;
+    border: none;
+    
+}

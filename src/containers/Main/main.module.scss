@@ -1,0 +1,28 @@
+.Main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.diagram {
+    max-height: 80%;
+}
+
+.result {
+    min-height: 20%;
+    background-color: cadetblue;
+    font-size: 1.8rem;
+}
+
+.result_code {
+    
+}
+
+.result_err {
+    color: rgb(255, 0, 0);
+}
