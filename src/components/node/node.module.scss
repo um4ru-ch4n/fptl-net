@@ -25,6 +25,7 @@
     background-color: #ff0000;
     min-width: 20px;
     min-height: 20px;
+    padding: 0.5rem;
 }
 
 .node-end {
@@ -40,9 +41,11 @@
 }
 
 .node_input {
-    font-size: 1rem;
-    max-width: 35px;
+    // color: #FFF;
+    font-size: 1.3rem;
+    max-width: 20rem;
     outline: none;
     border: none;
-    
+    text-align: center;
+    background-color: transparent;
 }

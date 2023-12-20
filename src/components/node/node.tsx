@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useLayoutEffect, useRef } from 'react'
 import {
     Handle,
     Position,
@@ -34,7 +34,6 @@ const getNodeLabel = (type: NodeType, label: string): string => {
             return "*"
         case NodeType.IMPLICATION:
             return "->"
-        case NodeType.ROOT_NODE:
         case NodeType.END_NODE:
             return ""
         default:
@@ -61,11 +60,28 @@ const getNodeClass = (type: NodeType): string => {
 }
 
 export const MyNode: React.FC<NodeProps<NodeData>> = ({ data: props }): JSX.Element => {
+    const inputRef = useRef<HTMLInputElement>(null);
+    const divRef = useRef<HTMLInputElement>(null);
+
     const nodeLabel: string = useMemo(() => {
         return getNodeLabel(props.type, props.label)
     }, [props.type, props.label])
 
     const nodeID = useNodeId();
+
+    useLayoutEffect(() => {
+        if (inputRef.current) {
+            inputRef.current.style.width = `${props.label.length * 8}px`;
+
+            if (!divRef || !divRef.current) {
+                return
+            }
+
+            if (props.type === NodeType.ROOT_NODE) {
+                divRef.current.style.height = `${props.label.length * 8}px`;
+            }
+        }
+    }, [props.label.length]);
 
     return (
         <>
@@ -85,7 +101,7 @@ export const MyNode: React.FC<NodeProps<NodeData>> = ({ data: props }): JSX.Elem
                     />
                 })
             }
-            <div className={cls.Node + " " + cls[getNodeClass(props.type)]}>
+            <div ref={divRef} className={cls.Node + " " + cls[getNodeClass(props.type)]}>
                 {props.type === NodeType.PARALLEL || props.type === NodeType.IMPLICATION ?
                     <label
                         className={cls.node_label}
@@ -95,9 +111,11 @@ export const MyNode: React.FC<NodeProps<NodeData>> = ({ data: props }): JSX.Elem
                 }
                 {
                     props.type === NodeType.CONSTANT ||
+                        props.type === NodeType.ROOT_NODE ||
                         props.type === NodeType.EXT_FUNCTION ?
                         <input
                             className={cls.node_input}
+                            ref={inputRef}
                             value={nodeLabel}
                             onChange={(e) => props.onInputChange ?
                                 props.onInputChange(nodeID || "", e.target.value)
@@ -108,6 +126,7 @@ export const MyNode: React.FC<NodeProps<NodeData>> = ({ data: props }): JSX.Elem
                                 <span>[</span>
                                 <input
                                     className={cls.node_input}
+                                    ref={inputRef}
                                     value={nodeLabel}
                                     onChange={(e) => props.onInputChange ?
                                         props.onInputChange(nodeID || "", e.target.value)

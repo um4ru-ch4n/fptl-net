@@ -5,7 +5,7 @@ import cls from './header.module.scss'
 export const Header: React.FC = (): JSX.Element => {
   return (
     <div className={cls.Header}>
-        <h1>This is header!</h1>
+        <h1>FPTL NET</h1>
     </div>
   )
 }

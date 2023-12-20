@@ -41,7 +41,10 @@ export const Sidebar: React.FC<SidebarProps> = (props): JSX.Element => {
                     onClick={() => props.onExampleNodeClick(NodeType.END_NODE)}
                 ></div></li>
             </ul>
-            <button onClick={props.onConvertButtonClick}>Convert</button>
+            <button
+                className={cls.convert}
+                onClick={props.onConvertButtonClick}
+            >Convert</button>
         </div>
     )
 }

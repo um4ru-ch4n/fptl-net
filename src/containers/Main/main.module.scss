@@ -7,14 +7,17 @@
 .content {
     width: 100%;
     background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
 }
 
 .diagram {
     max-height: 80%;
+    flex-grow: 4;
 }
 
 .result {
-    min-height: 20%;
+    flex-grow: 1;
     background-color: cadetblue;
     font-size: 1.8rem;
 }

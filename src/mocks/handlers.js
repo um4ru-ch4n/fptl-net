@@ -1,7 +1,8 @@
 import { HttpResponse, http } from 'msw';
 
-const solve = async () => {
-    // const body = await request.json();
+const solve = async ({request}) => {
+    const body = await request.json();
+    console.log(body)
 
     // return HttpResponse.json({}, { status: 400, statusText: "error text" })
 

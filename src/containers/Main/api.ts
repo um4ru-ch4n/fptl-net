@@ -3,8 +3,14 @@ import { NodeReq } from "./store";
 
 export const axiosInstance = (): AxiosInstance => {
     return axios.create({
-        baseURL: "http://localhost:5000",
+        baseURL: "http://127.0.0.1:5000",
         timeout: 2000,
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Credentials": "true",
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        }
     })
 }
 
@@ -27,7 +33,7 @@ export const fptlAPI = {
                 }
             }).catch(err => {
                 return {
-                    error: err.response.statusText,
+                    error: err.response?.statusText,
                     data: null,
                 }
             }),
