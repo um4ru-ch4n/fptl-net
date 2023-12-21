@@ -7,6 +7,10 @@
     align-items: center;
     padding: 0.40px;
     border: #000 solid 1px;
+
+    &__selected {
+        border: #000 solid 3px;
+    }
 }
 
 .node-rectangle {

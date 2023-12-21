@@ -7,10 +7,10 @@ const solve = async ({request}) => {
     // return HttpResponse.json({}, { status: 400, statusText: "error text" })
 
     return HttpResponse.json({
-        code: 'test code',
+        code: 'Fact = ([1] ∗ 0).equal -> 1, (([1] ∗ 1).sub.Fact ∗ [1]).mul',
     }, { status: 200 })
 }
 
 export const handlers = [
-    http.post(`http://localhost:5000/v1/solve`, solve),
+    http.post(`http://127.0.0.1:5000/v1/solve`, solve),
 ]

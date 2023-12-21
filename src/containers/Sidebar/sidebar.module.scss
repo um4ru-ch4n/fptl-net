@@ -62,6 +62,10 @@
 
 .convert {
     align-self: center;
-    width: 10rem;
-    height: 3rem;
+
+    button {
+        width: 8rem;
+        height: 3rem;
+        margin: 0 0.5rem;
+    }
 }

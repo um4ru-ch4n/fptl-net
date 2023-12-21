@@ -1,4 +1,4 @@
-import React, { useMemo, useLayoutEffect, useRef } from 'react'
+import React, { useMemo, useLayoutEffect, useRef, useEffect } from 'react'
 import {
     Handle,
     Position,
@@ -59,7 +59,7 @@ const getNodeClass = (type: NodeType): string => {
     }
 }
 
-export const MyNode: React.FC<NodeProps<NodeData>> = ({ data: props }): JSX.Element => {
+export const MyNode: React.FC<NodeProps<NodeData>> = ({ data: props, selected }): JSX.Element => {
     const inputRef = useRef<HTMLInputElement>(null);
     const divRef = useRef<HTMLInputElement>(null);
 
@@ -81,7 +81,20 @@ export const MyNode: React.FC<NodeProps<NodeData>> = ({ data: props }): JSX.Elem
                 divRef.current.style.height = `${props.label.length * 8}px`;
             }
         }
-    }, [props.label.length]);
+    }, [props.label.length, props.type]);
+
+    useEffect(() => {
+        if (!divRef || !divRef.current) {
+            return
+        }
+
+        if (selected) {
+            divRef.current.className += ` ${cls.Node__selected}`
+            return
+        }
+
+        divRef.current.className = `${cls.Node} ${cls[getNodeClass(props.type)]}`
+    }, [selected, props.type])
 
     return (
         <>

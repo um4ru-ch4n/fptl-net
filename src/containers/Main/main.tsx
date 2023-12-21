@@ -27,7 +27,7 @@ const selector = (state: RFState) => ({
   craftNodeTree: state.craftNodeTree,
 });
 
-let nodeId = 0;
+let nodeId = 20;
 
 const MainInternal: React.FC = (): JSX.Element => {
   const {
@@ -125,11 +125,17 @@ const MainInternal: React.FC = (): JSX.Element => {
     }
   }
 
+  const onClearButtonClick = () => {
+    reactFlowInstance.deleteElements({ nodes, edges });
+    nodeId = 0;
+  }
+
   return (
     <div className={cls.Main}>
       <Sidebar
         onExampleNodeClick={onExampleNodeClick}
         onConvertButtonClick={onConvertButtonClick}
+        onClearButtonClick={onClearButtonClick}
       />
       <div className={cls.content}>
         <ReactFlow

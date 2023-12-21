@@ -18,8 +18,13 @@
 
 .result {
     flex-grow: 1;
-    background-color: cadetblue;
+    background-color: rgb(135, 200, 202);
     font-size: 1.8rem;
+    padding: 1rem;
+
+    p {
+        margin: 0;
+    }
 }
 
 .result_code {

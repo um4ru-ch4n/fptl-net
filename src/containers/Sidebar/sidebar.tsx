@@ -4,8 +4,9 @@ import cls from './sidebar.module.scss'
 import { NodeType } from '../../model/types'
 
 type SidebarProps = {
-    onExampleNodeClick: (type: NodeType) => void
-    onConvertButtonClick: () => void
+    onExampleNodeClick: (type: NodeType) => void,
+    onConvertButtonClick: () => void,
+    onClearButtonClick: () => void,
 }
 
 export const Sidebar: React.FC<SidebarProps> = (props): JSX.Element => {
@@ -41,10 +42,14 @@ export const Sidebar: React.FC<SidebarProps> = (props): JSX.Element => {
                     onClick={() => props.onExampleNodeClick(NodeType.END_NODE)}
                 ></div></li>
             </ul>
-            <button
-                className={cls.convert}
-                onClick={props.onConvertButtonClick}
-            >Convert</button>
+            <div className={cls.convert}>
+                <button
+                    onClick={props.onConvertButtonClick}
+                >Convert</button>
+                <button
+                    onClick={props.onClearButtonClick}
+                >Clear</button>
+            </div>
         </div>
     )
 }
