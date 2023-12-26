@@ -878,9 +878,7 @@ const useStore = createWithEqualityFn<RFState>((set, get) => ({
     updateNodeLabel: (nodeID: string, newLabel: string) => {
         set({
             nodes: get().nodes.map(node => {
-                console.log(nodeID, newLabel)
                 if (node.id === nodeID) {
-                    console.log(node)
                     node.data = { ...node.data, label: newLabel }
                 }
 

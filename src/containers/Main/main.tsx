@@ -103,7 +103,7 @@ const MainInternal: React.FC = (): JSX.Element => {
       position: { x: 50, y: 50 },
     }
     reactFlowInstance.addNodes(newNode)
-  }, [])
+  }, [reactFlowInstance, updateNodeLabel])
 
   const onConvertButtonClick = async () => {
     const tree = craftNodeTree()
@@ -128,6 +128,8 @@ const MainInternal: React.FC = (): JSX.Element => {
   const onClearButtonClick = () => {
     reactFlowInstance.deleteElements({ nodes, edges });
     nodeId = 0;
+    setResult(() => "");
+    setResultErr(() => "");
   }
 
   return (
