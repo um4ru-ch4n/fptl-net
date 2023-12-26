@@ -12,6 +12,8 @@ import {
     Position,
 } from 'reactflow';
 import { createWithEqualityFn } from 'zustand/traditional';
+import { v4 as uuidv4 } from 'uuid';
+
 import { CustomNode } from '../../components/node/node';
 import { NodeType } from '../../model/types';
 
@@ -56,16 +58,16 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 398.4009581155626,
-            y: 552.3900462796967
+            x: 303.2885303807502,
+            y: 534.8149237634814
         },
         width: 63,
         height: 43,
         selected: false,
         dragging: false,
         positionAbsolute: {
-            x: 398.4009581155626,
-            y: 552.3900462796967
+            x: 303.2885303807502,
+            y: 534.8149237634814
         }
     },
     {
@@ -83,15 +85,15 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 1000.5999999999998,
-            y: 342
+            x: 1123.1555011832852,
+            y: 336.8308463187602
         },
         width: 23,
         height: 23,
         selected: false,
         positionAbsolute: {
-            x: 1000.5999999999998,
-            y: 342
+            x: 1123.1555011832852,
+            y: 336.8308463187602
         },
         dragging: false
     },
@@ -115,15 +117,15 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 925.5999999999999,
-            y: 332
+            x: 1030.9332920174918,
+            y: 326.6327400206645
         },
         width: 43,
         height: 43,
         selected: false,
         positionAbsolute: {
-            x: 925.5999999999999,
-            y: 332
+            x: 1030.9332920174918,
+            y: 326.6327400206645
         },
         dragging: false
     },
@@ -147,16 +149,16 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 833,
-            y: 476
+            x: 914.672628163589,
+            y: 467.7293541100164
         },
         width: 63,
         height: 43,
         selected: false,
         dragging: false,
         positionAbsolute: {
-            x: 833,
-            y: 476
+            x: 914.672628163589,
+            y: 467.7293541100164
         }
     },
     {
@@ -179,16 +181,16 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 661,
-            y: 416
+            x: 718.8945212298861,
+            y: 413.9323385275041
         },
         width: 63,
         height: 43,
         selected: false,
         dragging: false,
         positionAbsolute: {
-            x: 661,
-            y: 416
+            x: 718.8945212298861,
+            y: 413.9323385275041
         }
     },
     {
@@ -211,16 +213,16 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 563,
-            y: 415
+            x: 604.353229449918,
+            y: 413.96616926375196
         },
         width: 63,
         height: 43,
         selected: false,
         dragging: false,
         positionAbsolute: {
-            x: 563,
-            y: 415
+            x: 604.353229449918,
+            y: 413.96616926375196
         }
     },
     {
@@ -307,16 +309,16 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 516,
-            y: 296
+            x: 522.3944482373481,
+            y: 294.4224563499475
         },
         width: 63,
         height: 43,
         selected: false,
         dragging: false,
         positionAbsolute: {
-            x: 516,
-            y: 296
+            x: 522.3944482373481,
+            y: 294.4224563499475
         }
     },
     {
@@ -403,15 +405,15 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 759,
-            y: 477
+            x: 830.3343208011095,
+            y: 467.6955233737683
         },
         width: 43,
         height: 43,
         selected: false,
         positionAbsolute: {
-            x: 759,
-            y: 477
+            x: 830.3343208011095,
+            y: 467.6955233737683
         },
         dragging: false
     },
@@ -435,15 +437,15 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 491.4059688349755,
-            y: 415
+            x: 514.1502450324306,
+            y: 413.966169263752
         },
         width: 43,
         height: 43,
         selected: false,
         positionAbsolute: {
-            x: 491.4059688349755,
-            y: 415
+            x: 514.1502450324306,
+            y: 413.966169263752
         },
         dragging: false
     },
@@ -467,15 +469,15 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 420,
-            y: 296
+            x: 428.20171152573425,
+            y: 294.17739743872573
         },
         width: 43,
         height: 43,
         selected: false,
         positionAbsolute: {
-            x: 420,
-            y: 296
+            x: 428.20171152573425,
+            y: 294.17739743872573
         },
         dragging: false
     },
@@ -499,15 +501,15 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 327.8646770550081,
-            y: 422.13532294499186
+            x: 303.05273938505695,
+            y: 420.0676614724959
         },
         width: 43,
         height: 43,
         selected: false,
         positionAbsolute: {
-            x: 327.8646770550081,
-            y: 422.13532294499186
+            x: 303.05273938505695,
+            y: 420.0676614724959
         },
         dragging: false
     },
@@ -531,15 +533,15 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 233,
-            y: 474
+            x: 193.8140449326031,
+            y: 440.2818526164258
         },
         width: 43,
         height: 43,
         selected: false,
         positionAbsolute: {
-            x: 233,
-            y: 474
+            x: 193.8140449326031,
+            y: 440.2818526164258
         },
         dragging: false
     },
@@ -563,15 +565,15 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 235,
-            y: 303
+            x: 200.37055133578883,
+            y: 299.35479487745147
         },
         width: 43,
         height: 43,
         selected: false,
         positionAbsolute: {
-            x: 235,
-            y: 303
+            x: 200.37055133578883,
+            y: 299.35479487745147
         },
         dragging: false
     },
@@ -595,16 +597,16 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 280,
-            y: 180
+            x: 197.07158346202039,
+            y: 167.24178207108008
         },
         width: 63,
         height: 43,
         selected: false,
         dragging: false,
         positionAbsolute: {
-            x: 280,
-            y: 180
+            x: 197.07158346202039,
+            y: 167.24178207108008
         }
     },
     {
@@ -627,15 +629,15 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 138,
-            y: 305
+            x: 85.88760776209153,
+            y: 301.5203010364837
         },
         width: 43,
         height: 43,
         selected: false,
         positionAbsolute: {
-            x: 138,
-            y: 305
+            x: 85.88760776209153,
+            y: 301.5203010364837
         },
         dragging: false
     },
@@ -659,10 +661,17 @@ const initialNodes: CustomNode[] = [
             ]
         },
         position: {
-            x: 50,
-            y: 50
+            x: -11.190802522047761,
+            y: 301.484380894213
         },
-        selected: false
+        selected: false,
+        width: 48,
+        height: 44,
+        positionAbsolute: {
+            x: -11.190802522047761,
+            y: 301.484380894213
+        },
+        dragging: false
     },
     {
         id: "1",
@@ -676,18 +685,18 @@ const initialNodes: CustomNode[] = [
                     type: "source",
                     position: Position.Right
                 }
-            ],
+            ]
         },
         position: {
-            x: 48,
-            y: 305
+            x: -11.190802522047761,
+            y: 301.484380894213
         },
         width: 48,
         height: 44,
         selected: false,
         positionAbsolute: {
-            x: 48,
-            y: 305
+            x: -11.190802522047761,
+            y: 301.484380894213
         },
         dragging: false
     }
@@ -699,161 +708,185 @@ const initialEdges: Edge[] = [
         sourceHandle: "output_1",
         target: "2",
         targetHandle: "input_1",
-        id: "reactflow__edge-1output_1-2input_1"
+        id: "reactflow__edge-1output_1-2input_1",
+        type: "smoothstep"
     },
     {
         source: "2",
         sourceHandle: "output_1",
         target: "4",
         targetHandle: "input_1",
-        id: "reactflow__edge-2output_1-4input_1"
+        id: "reactflow__edge-2output_1-4input_1",
+        type: "smoothstep"
     },
     {
         source: "4",
         sourceHandle: "output_1",
         target: "10",
         targetHandle: "input_1",
-        id: "reactflow__edge-4output_1-10input_1"
+        id: "reactflow__edge-4output_1-10input_1",
+        type: "smoothstep"
     },
     {
         source: "4",
         sourceHandle: "output_1",
         target: "11",
         targetHandle: "input_1",
-        id: "reactflow__edge-4output_1-11input_1"
+        id: "reactflow__edge-4output_1-11input_1",
+        type: "smoothstep"
     },
     {
         source: "11",
         sourceHandle: "output_1",
         target: "7",
         targetHandle: "input_1",
-        id: "reactflow__edge-11output_1-7input_1"
+        id: "reactflow__edge-11output_1-7input_1",
+        type: "smoothstep"
     },
     {
         source: "10",
         sourceHandle: "output_1",
         target: "7",
         targetHandle: "input_1",
-        id: "reactflow__edge-10output_1-7input_1"
+        id: "reactflow__edge-10output_1-7input_1",
+        type: "smoothstep"
     },
     {
         source: "2",
         sourceHandle: "output_1",
         target: "3",
         targetHandle: "input_1",
-        id: "reactflow__edge-2output_1-3input_1"
+        id: "reactflow__edge-2output_1-3input_1",
+        type: "smoothstep"
     },
     {
         source: "3",
         sourceHandle: "output_1",
         target: "18",
         targetHandle: "input_1",
-        id: "reactflow__edge-3output_1-18input_1"
+        id: "reactflow__edge-3output_1-18input_1",
+        type: "smoothstep"
     },
     {
         source: "18",
         sourceHandle: "output_1",
         target: "19",
         targetHandle: "input_1",
-        id: "reactflow__edge-18output_1-19input_1"
-    },
-    {
-        source: "7",
-        sourceHandle: "output_1",
-        target: "12",
-        targetHandle: "input_1",
-        id: "reactflow__edge-7output_1-12input_1"
+        id: "reactflow__edge-18output_1-19input_1",
+        type: "smoothstep"
     },
     {
         source: "6",
         sourceHandle: "output_1",
         target: "13",
         targetHandle: "input_1",
-        id: "reactflow__edge-6output_1-13input_1"
+        id: "reactflow__edge-6output_1-13input_1",
+        type: "smoothstep"
     },
     {
         source: "6",
         sourceHandle: "output_1",
         target: "14",
         targetHandle: "input_1",
-        id: "reactflow__edge-6output_1-14input_1"
+        id: "reactflow__edge-6output_1-14input_1",
+        type: "smoothstep"
     },
     {
         source: "5",
         sourceHandle: "output_1",
         target: "6",
         targetHandle: "input_1",
-        id: "reactflow__edge-5output_1-6input_1"
+        id: "reactflow__edge-5output_1-6input_1",
+        type: "smoothstep"
     },
     {
         source: "5",
         sourceHandle: "output_1",
         target: "20",
         targetHandle: "input_1",
-        id: "reactflow__edge-5output_1-20input_1"
+        id: "reactflow__edge-5output_1-20input_1",
+        type: "smoothstep",
+        selected: false
     },
     {
         source: "13",
         sourceHandle: "output_1",
         target: "8",
         targetHandle: "input_1",
-        id: "reactflow__edge-13output_1-8input_1"
+        id: "reactflow__edge-13output_1-8input_1",
+        type: "smoothstep"
     },
     {
         source: "14",
         sourceHandle: "output_1",
         target: "8",
         targetHandle: "input_1",
-        id: "reactflow__edge-14output_1-8input_1"
+        id: "reactflow__edge-14output_1-8input_1",
+        type: "smoothstep"
     },
     {
         source: "8",
         sourceHandle: "output_1",
         target: "15",
         targetHandle: "input_1",
-        id: "reactflow__edge-8output_1-15input_1"
+        id: "reactflow__edge-8output_1-15input_1",
+        type: "smoothstep"
     },
     {
         source: "15",
         sourceHandle: "output_1",
         target: "16",
         targetHandle: "input_1",
-        id: "reactflow__edge-15output_1-16input_1"
+        id: "reactflow__edge-15output_1-16input_1",
+        type: "smoothstep"
     },
     {
         source: "16",
         sourceHandle: "output_1",
         target: "9",
         targetHandle: "input_1",
-        id: "reactflow__edge-16output_1-9input_1"
+        id: "reactflow__edge-16output_1-9input_1",
+        type: "smoothstep"
     },
     {
         source: "20",
         sourceHandle: "output_1",
         target: "9",
         targetHandle: "input_1",
-        id: "reactflow__edge-20output_1-9input_1"
+        id: "reactflow__edge-20output_1-9input_1",
+        type: "smoothstep"
     },
     {
         source: "9",
         sourceHandle: "output_1",
         target: "17",
         targetHandle: "input_1",
-        id: "reactflow__edge-9output_1-17input_1"
+        id: "reactflow__edge-9output_1-17input_1",
+        type: "smoothstep"
     },
     {
         source: "17",
         sourceHandle: "output_1",
         target: "18",
         targetHandle: "input_1",
-        id: "reactflow__edge-17output_1-18input_1"
+        id: "reactflow__edge-17output_1-18input_1",
+        type: "smoothstep"
     },
     {
         source: "2",
         sourceHandle: "output_1",
         target: "5",
         targetHandle: "input_1",
-        id: "reactflow__edge-2output_1-5input_1"
+        id: "reactflow__edge-2output_1-5input_1",
+        type: "smoothstep"
+    },
+    {
+        id: "f465f292-81e0-42cb-a6f8-13fcfa5e16d7",
+        source: "7",
+        target: "12",
+        sourceHandle: "output_1",
+        targetHandle: "input_1",
+        type: "smoothstep"
     }
 ]
 
@@ -871,8 +904,17 @@ const useStore = createWithEqualityFn<RFState>((set, get) => ({
         });
     },
     onConnect: (connection: Connection) => {
+        const newAdge: Edge = {
+            id: uuidv4(),
+            source: connection.source || "",
+            target: connection.target || "",
+            sourceHandle: connection.sourceHandle,
+            targetHandle: connection.targetHandle,
+            type: 'smoothstep',
+        }
+
         set({
-            edges: addEdge(connection, get().edges),
+            edges: addEdge(newAdge, get().edges),
         });
     },
     updateNodeLabel: (nodeID: string, newLabel: string) => {

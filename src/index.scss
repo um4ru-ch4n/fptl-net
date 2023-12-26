@@ -1,10 +1,22 @@
+@font-face {
+  font-family: "GTEastiProDisplay";
+  src: url("assets/fonts/GTEestiProDisplay/gteestiprodisplay_regular.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "GTEastiProDisplay";
+  src: url("assets/fonts/GTEestiProDisplay/gteestiprodisplay_bold.otf") format("opentype");
+  font-weight: 600;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
   margin: 0;
-  background-color: #ccc;
+  background-color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -14,3 +26,4 @@ h1, h2, h3, h4, h5, h6 {
 .react-flow__panel {
   display: none;
 }
+

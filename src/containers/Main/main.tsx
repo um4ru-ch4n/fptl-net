@@ -111,10 +111,13 @@ const MainInternal: React.FC = (): JSX.Element => {
       return
     }
 
+    console.log(nodes)
+    console.log(edges)
+
     const resp = await fptlAPI.solve(tree)
     if (resp.error) {
       setResult("");
-      setResultErr(resp.error);
+      setResultErr("Error: " + resp.error);
 
       return
     }
@@ -151,8 +154,18 @@ const MainInternal: React.FC = (): JSX.Element => {
           nodeTypes={nodeTypes}
         />
         <div className={cls.result}>
-          <p className={cls.result_code}>{result}</p>
-          <p className={cls.result_err}>{resultErr}</p>
+          {
+            result ?
+              <p className={cls.result_code}>{result}</p>
+              :
+              <></>
+          }
+          {
+            resultErr ?
+              <p className={cls.result_err}>{resultErr}</p>
+              :
+              <></>
+          }
         </div>
       </div>
     </div>

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@types/node": "^20.10.5",
+    "@types/uuid": "^9.0.7",
     "axios": "^1.6.2",
     "classcat": "^5.0.4",
     "msw": "^2.0.11",
@@ -20,6 +21,7 @@
     "react-router-dom": "^6.20.1",
     "reactflow": "^11.10.1",
     "sass": "^1.69.5",
+    "uuid": "^9.0.1",
     "zustand": "^4.4.7"
   },
   "devDependencies": {

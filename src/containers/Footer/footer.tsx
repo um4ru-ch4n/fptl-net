@@ -5,7 +5,8 @@ import cls from './footer.module.scss'
 export const Footer: React.FC = (): JSX.Element => {
   return (
     <div className={cls.Footer}>
-        <h2>This is footer!</h2>
+      <p>Группа: А-13м-22</p>
+      <p>Студент: Олейников А.П.</p>
     </div>
   )
 }

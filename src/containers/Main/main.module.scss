@@ -1,26 +1,30 @@
 .Main {
-    min-height: 80vh;
+    height: 85vh;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .content {
-    width: 100%;
-    background-color: aquamarine;
+    min-width: 101.2rem;
     display: flex;
     flex-direction: column;
+    border: 2px solid #005bff;
+    border-radius: 1rem;
 }
 
 .diagram {
-    max-height: 80%;
     flex-grow: 4;
 }
 
 .result {
+    min-height: 9rem;
     flex-grow: 1;
-    background-color: rgb(135, 200, 202);
     font-size: 1.8rem;
     padding: 1rem;
+    margin: 0.5rem;
+    border: 1px solid lighten(#005bff, 10);
+    border-radius: 1rem;
 
     p {
         margin: 0;
@@ -28,9 +32,14 @@
 }
 
 .result_code {
+    font-family: "GTEastiProDisplay";
     
 }
 
 .result_err {
-    color: rgb(255, 0, 0);
+    color: #fff;
+    background-color: rgb(249, 17, 85);
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3rem;
 }
